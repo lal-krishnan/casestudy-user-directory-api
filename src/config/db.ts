@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { _DB_CONNECTION_STRING } from './constants';
 import User from '../models/UserModel';
-const connectDb = () => {
+const connectDb = (_DB_CONNECTION_STRING:string) => {
+  console.log("_DB_CONNECTION_STRING_DB_CONNECTION_STRING",_DB_CONNECTION_STRING)
   return mongoose.connect(_DB_CONNECTION_STRING);
 };
 const models = { User };
